@@ -2,9 +2,9 @@
 
 ## What is a container ?
 
-1. A container is a bundle of Application, Application libraries required to run your application and the minimum system dependencies.
+1. A container is a bundle of Application, application libraries required to run your application and the minimum system dependencies.
 2. Docker container images are self-contained packages with necessary packages to execute an application, runtime, tools, libraries, and settings.
-3. These images ensure the application runs reliably and swiftly, promoting seamless deployment in computing environments.
+3. These images ensure the application runs reliably and quickly, promoting seamless deployment in computing environments.
 
 ![Screenshot 2023-02-07 at 7 18 10 PM](https://user-images.githubusercontent.com/43399466/217262726-7cabcb5b-074d-45cc-950e-84f7119e7162.png)
 
@@ -12,7 +12,9 @@
 
 Containers and virtual machines are both technologies used to isolate applications and their dependencies, but they have some key differences:
 
-    1. Resource Utilization: Containers share the host operating system kernel, making them lighter and faster than VMs. VMs have a full-fledged OS and hypervisor, making them more resource-intensive.
+    1. Resource Utilization: 
+        Containers share the host operating system kernel, and making them lighter and faster than VMs. 
+        VMs have a full-fledged OS and hypervisor, making them more resource-intensive.
 
     2. Portability: Containers are designed to be portable and can run on any system with a compatible host operating system. VMs are less portable as they need a compatible hypervisor to run.
 
