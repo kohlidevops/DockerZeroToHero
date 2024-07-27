@@ -28,16 +28,62 @@ They promote quick and seamless deployment, making it easier to move application
 
 Containers and virtual machines are both technologies used to isolate applications and their dependencies, but they have some key differences:
 
-    1. Resource Utilization: 
-        Containers share the host operating system kernel, and making them lighter and faster than VMs. 
-        VMs have a full-fledged OS and hypervisor, making them more resource-intensive.
+**1. Resource Utilization**
 
-    2. Portability: Containers are designed to be portable and can run on any system with a compatible host operating system. VMs are less portable as they need a compatible hypervisor to run.
+Containers:
 
-    3. Security: VMs provide a higher level of security as each VM has its own operating system and can be isolated from the host and other VMs. Containers provide less isolation, as they share the host operating system.
+Shared OS Kernel: Containers share the host operating system kernel, which makes them lightweight.
+Efficiency: Since they don't require a full OS, they use fewer system resources, making them faster and more efficient.
+Virtual Machines (VMs):
 
-    4.  Management: Managing containers is typically easier than managing VMs, as containers are designed to be lightweight and fast-moving.
+Full OS and Hypervisor: Each VM runs a complete operating system on top of a hypervisor.
+Resource Intensive: This makes VMs more resource-intensive as they require more memory and processing power.
+Example:
 
+If you have 5 applications to run, using containers might only require the resources equivalent to one full OS. Using VMs, you might need 5 separate OS instances, significantly increasing resource usage.
+
+**2. Portability**
+
+Containers:
+
+High Portability: Containers are designed to be portable and can run on any system with a compatible container runtime (like Docker).
+Consistency: They ensure the application behaves the same regardless of where they are deployed.
+Virtual Machines (VMs):
+
+Dependent on Hypervisor: VMs need a compatible hypervisor (like VMware, Hyper-V) to run, making them less portable.
+Migration: Moving VMs between different environments can be more complex.
+
+Example:
+
+You can take a containerized application from your laptop to a cloud server without any changes. For a VM, you might need to ensure the cloud server supports the specific hypervisor used by your VM.
+
+**3. Security**
+
+Containers:
+
+Shared OS: Containers share the host operating system, which can pose a security risk if one container is compromised.
+Isolation: While they provide some level of isolation, it’s less robust compared to VMs.
+Virtual Machines (VMs):
+
+Full Isolation: Each VM has its own OS and is isolated from the host and other VMs, providing stronger security boundaries.
+Higher Security: If one VM is compromised, it’s less likely to affect others.
+Example:
+
+In a multi-tenant environment, using VMs can prevent one tenant’s compromised VM from affecting others. Containers might require additional security measures to achieve the same level of isolation.
+
+**4. Management**
+
+Containers:
+
+Ease of Management: Containers are lightweight and can be started, stopped, and scaled quickly.
+Orchestration Tools: Tools like Kubernetes make it easier to manage large numbers of containers.
+Virtual Machines (VMs):
+
+Complex Management: VMs are heavier and take longer to start and stop.
+Traditional Tools: Managing VMs often requires more traditional and complex management tools.
+Example:
+
+Deploying a new version of an application can be done in seconds with containers, but might take minutes or longer with VMs due to their larger size and longer startup times.
 
 
 ## Why are containers light weight ?
