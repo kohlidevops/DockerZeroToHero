@@ -2,9 +2,25 @@
 
 ## What is a container ?
 
-1. A container is a bundle of Application, application libraries required to run your application and the minimum system dependencies.
-2. Docker container images are self-contained packages with necessary packages to execute an application, runtime, tools, libraries, and settings.
-3. These images ensure the application runs reliably and quickly, promoting seamless deployment in computing environments.
+A container is like a small, portable, and self-sufficient unit that contains everything needed to run a specific application. This includes the application itself, the libraries, tools, runtime, and minimal system dependencies required by the application.
+
+**Key Concepts**
+
+**Self-Contained:**
+
+A container includes all the necessary components for an application to run.
+Think of it as a "package" that contains the application and everything it needs, so it doesn't rely on the host system’s configuration.
+
+**Docker Container Images:**
+
+These are templates used to create containers.
+They bundle the application code, runtime, libraries, and settings needed to run the application.
+This makes the application run consistently regardless of where it's deployed.
+
+**Reliability and Speed**:
+
+Containers ensure that the application runs reliably by keeping the environment consistent across different deployment scenarios.
+They promote quick and seamless deployment, making it easier to move applications between development, testing, and production environments.
 
 ![Screenshot 2023-02-07 at 7 18 10 PM](https://user-images.githubusercontent.com/43399466/217262726-7cabcb5b-074d-45cc-950e-84f7119e7162.png)
 
