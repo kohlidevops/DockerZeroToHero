@@ -112,9 +112,6 @@ Below is the screenshot of official ubuntu base image which you can use for your
 ![Screenshot 2023-02-08 at 3 12 38 PM](https://user-images.githubusercontent.com/43399466/217493284-85411ae0-b283-4475-9729-6b082e35fc7d.png)
 
 
-To provide a better picture of files and folders that containers base images have and files and folders that containers use from host operating system (not 100 percent accurate -> varies from base image to base image). Refer below.
-
-
 
 ### Files and Folders in containers base images
 
@@ -153,12 +150,7 @@ To provide a better picture of files and folders that containers base images hav
 
 It's important to note that while a container uses resources from the host operating system, it is still isolated from the host and other containers, so changes to the container do not affect the host or other containers.
 
-**Note:** There are multiple ways to reduce your VM image size as well, but I am just talking about the default for easy comparision and understanding.
-
-so, in a nutshell, container base images are typically smaller compared to VM images because they are designed to be minimalist and only contain the necessary components for running a specific application or service. VMs, on the other hand, emulate an entire operating system, including all its libraries, utilities, and system files, resulting in a much larger size. 
-
-I hope it is now very clear why containers are light weight in nature.
-
+Container base images are typically smaller compared to VM images because they are designed to be minimalist and only contain the necessary components for running a specific application or service. VMs, on the other hand, emulate an entire operating system, including all its libraries, utilities, and system files, resulting in a much larger size. 
 
 
 ## Docker
@@ -166,7 +158,7 @@ I hope it is now very clear why containers are light weight in nature.
 
 ### What is Docker ?
 
-Docker is a containerization platform that provides easy way to containerize your applications, which means, using Docker you can build container images, run the images to create containers and also push these containers to container regestries such as DockerHub, Quay.io and so on.
+Docker is a containerization platform that provides easy way to containerize your applications, which means, using Docker you can build container images, run the images to create containers and also push these containers to container regestries such as DockerHub.
 
 In simple words, you can understand as `containerization is a concept or technology` and `Docker Implements Containerization`.
 
@@ -191,7 +183,7 @@ There are three important things,
 
 
 
-### Understanding the terminology (Inspired from Docker Docs)
+### Understanding the terminology
 
 
 #### Docker daemon
@@ -206,7 +198,7 @@ The Docker client (docker) is the primary way that many Docker users interact wi
 
 #### Docker Desktop
 
-Docker Desktop is an easy-to-install application for your Mac, Windows or Linux environment that enables you to build and share containerized applications and microservices. Docker Desktop includes the Docker daemon (dockerd), the Docker client (docker), Docker Compose, Docker Content Trust, Kubernetes, and Credential Helper. For more information, see Docker Desktop.
+Docker Desktop is an easy-to-install application for your Mac, Windows or Linux environment that enables you to build and share containerized applications and microservices.
 
 
 #### Docker registries
@@ -214,7 +206,8 @@ Docker Desktop is an easy-to-install application for your Mac, Windows or Linux 
 A Docker registry stores Docker images. Docker Hub is a public registry that anyone can use, and Docker is configured to look for images on Docker Hub by default. You can even run your own private registry.
 
 When you use the docker pull or docker run commands, the required images are pulled from your configured registry. When you use the docker push command, your image is pushed to your configured registry.
-Docker objects
+
+**Docker objects**
 
 When you use Docker, you are creating and using images, containers, networks, volumes, plugins, and other objects. This section is a brief overview of some of those objects.
 
@@ -429,4 +422,3 @@ c5ff2d88f679: Mounted from library/ubuntu
 latest: digest: sha256:6e49841ad9e720a7baedcd41f9b666fcd7b583151d0763fe78101bb8221b1d88 size: 1157
 ```
 
-### You must be feeling like a champ already 
